@@ -5,14 +5,13 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Controller;
 import pl.com.markdev.DatabaseIntegrationApplication.cfg.MyDataSource;
 import pl.com.markdev.DatabaseIntegrationApplication.dao.MedicineDAO;
-import pl.com.markdev.DatabaseIntegrationApplication.forms.MedicineForm;
+import pl.com.markdev.DatabaseIntegrationApplication.forms.AppForm;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
 
 import javax.swing.JButton;
-import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -27,10 +26,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-@Service
+@Controller
 public class MedicineController {
 
-    private MedicineForm medicineForm;
+    @Autowired
+    private AppForm appForm;
+
+    @Autowired
+    private MenuController menuController;
 
     @Autowired
     private MyDataSource dataSource;
@@ -43,24 +46,25 @@ public class MedicineController {
     private String password;
     List<MedicineModel> medicineModels = new ArrayList<>();
 
-    private JPanel medicinePanel;
     private JTextField urlField;
     private JTextField usernameField;
     private JTextField passwordField;
     private JButton connectButton;
     private JTable table1;
     private JRadioButton excelFile;
+    private JButton saveButton;
+    private JButton backButton;
 
-    public MedicineController() {
+    public void initView() {
 
-        medicineForm = new MedicineForm();
-
-        urlField = medicineForm.getUrl();
-        usernameField = medicineForm.getUsername();
-        passwordField = medicineForm.getPassword();
-        connectButton = medicineForm.getConnectButton();
-        table1 = medicineForm.getTable1();
-        excelFile = medicineForm.getExcelFile();
+        urlField = appForm.getUrl();
+        usernameField = appForm.getUsername();
+        passwordField = appForm.getPassword();
+        connectButton = appForm.getConnectButton();
+        table1 = appForm.getAllFromAddMedicinesTable();
+        excelFile = appForm.getExcelFileRadioButton();
+        saveButton = appForm.getSaveFromAddButton();
+        backButton = appForm.getBackFromAddButton();
 
         excelFile.addActionListener(new ActionListener() {
             @Override
@@ -78,7 +82,25 @@ public class MedicineController {
             }
         });
 
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                appForm.getCardLayout().show(appForm.getContPanel(), "menuPanel");
+                menuController.initView();
+            }
+        });
+
         showAll();
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dataSource.setUrl("jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp");
+                dataSource.setUsername("sa");
+                dataSource.setPassword("");
+
+                medicineDAO.saveAll(medicineModels);
+            }
+        });
     }
 
     public void showAll() {
@@ -86,33 +108,34 @@ public class MedicineController {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                saveButton.setVisible(true);
                 url = urlField.getText();
                 username = usernameField.getText();
                 password = passwordField.getText();
 
-                if (excelFile.isSelected()){
+                if (excelFile.isSelected()) {
                     try {
                         FileInputStream excelDatabase = new FileInputStream(new File(url));
-                        XSSFWorkbook workbook = new XSSFWorkbook (excelDatabase);
+                        XSSFWorkbook workbook = new XSSFWorkbook(excelDatabase);
                         XSSFSheet sheet = workbook.getSheetAt(0);
                         Iterator<Row> rowIterator = sheet.iterator();
 
                         List<String> medsRow = new ArrayList<>();
                         String rowMed = "";
-                        while (rowIterator.hasNext()){
+                        while (rowIterator.hasNext()) {
                             rowMed = "";
 
                             Row row = rowIterator.next();
                             Iterator<Cell> cellIterator = row.cellIterator();
-                            while (cellIterator.hasNext()){
+                            while (cellIterator.hasNext()) {
                                 Cell cell = cellIterator.next();
 
-                                switch (cell.getCellType()){
+                                switch (cell.getCellType()) {
                                     case Cell.CELL_TYPE_NUMERIC:
                                         rowMed = cell.getNumericCellValue() + "/t ";
                                         break;
                                     case Cell.CELL_TYPE_STRING:
-                                        rowMed = rowMed + cell.getStringCellValue()+ "/t";
+                                        rowMed = rowMed + cell.getStringCellValue() + "/t";
                                         break;
                                 }
                             }
@@ -121,13 +144,6 @@ public class MedicineController {
 
                         medicineModels = medicineDAO.allMedicinesFromExcel(medsRow);
 
-                        dataSource.setUrl("jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp");
-                        dataSource.setUsername("sa");
-                        dataSource.setPassword("");
-
-                        medicineDAO.saveAll(medicineModels);
-
-
                     } catch (FileNotFoundException e1) {
                         e1.printStackTrace();
                     } catch (IOException e1) {
@@ -135,18 +151,12 @@ public class MedicineController {
                     }
                 } else {
 
-
                     dataSource.setUrl(url);
                     dataSource.setUsername(username);
                     dataSource.setPassword(password);
 
                     medicineModels = medicineDAO.allMedicines();
 
-                    dataSource.setUrl("jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp");
-                    dataSource.setUsername("sa");
-                    dataSource.setPassword("");
-
-                    medicineDAO.saveAll(medicineModels);
                 }
                 DefaultTableModel defaultTableModel = getDefaultTableModel();
                 fillTable(medicineModels, defaultTableModel);
@@ -181,10 +191,5 @@ public class MedicineController {
                     medicineModel.getQuantityInPackage()
             });
         }
-    }
-
-    public JPanel getMedicinePanel() {
-        medicinePanel = medicineForm.getMedicinePanel();
-        return medicinePanel;
     }
 }
