@@ -3,16 +3,14 @@ package pl.com.markdev.DatabaseIntegrationApplication.forms;
 import org.springframework.stereotype.Component;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 import java.awt.CardLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 @Component
 public class AppForm extends JFrame {
@@ -27,31 +25,65 @@ public class AppForm extends JFrame {
     private JButton showAllDataButton;
 
     private JPanel connectPanel;
-    private JTextField username;
     private JTextField url;
-    private JRadioButton excelFileRadioButton;
+    private JTextField username;
     private JTextField password;
+    private JRadioButton excelFileRadioButton;
     private JButton backFromAddButton;
-    private JButton saveFromAddButton;
     private JButton connectButton;
-    private JTable allFromAddMedicinesTable;
 
     private JPanel allMedicinesPanel;
     private JTable allMedicinesTable;
     private JButton backFromAllButton;
 
+    private JPanel combinePanel;
+    private JTextField urlTextField;
+    private JTextField usernameTextField;
+    private JTextField passwordTextField;
+    private JComboBox nameComboBox;
+    private JComboBox manufacturerComboBox;
+    private JComboBox internationalNameOfIngredientsComboBox;
+    private JComboBox formComboBox;
+    private JComboBox doseComboBox;
+    private JComboBox quantityInPackageComboBox;
+    private JLabel nameLabel;
+    private JLabel manufacturerLabel;
+    private JLabel internationalNameOfIngredientsLabel;
+    private JLabel formLabel;
+    private JLabel doseLabel;
+    private JLabel quantityInPackageLabel;
+    private JButton backFromSecondAddButton;
+    private JButton nextButton;
+    private JRadioButton excelFileRadioButtonSecondAdd;
+
+
+
+    private JPanel finalConnectPanel;
+    private JButton saveFromAddButton;
+    private JButton backFromFinalAddButton;
+    private JTextField urlFinalAdd;
+    private JTextField usernameFinalAdd;
+    private JTextField passwordFinalAdd;
+    private JRadioButton excelFileRadioButtonFinalAdd;
+    private JTable allFromAddMedicinesTable;
+
+
     CardLayout cardLayout = new CardLayout();
 
     public AppForm(){
 
-        saveFromAddButton.setVisible(false);
         contPanel.setLayout(cardLayout);
 
         contPanel.add(menuPanel, "menuPanel");
         contPanel.add(allMedicinesPanel, "allMedicinesPanel");
         contPanel.add(connectPanel, "connectPanel");
+        contPanel.add(combinePanel, "combinePanel");
+        contPanel.add(finalConnectPanel, "finalConnectPanel");
 
-        url.setText("D:\\Pulpit/medicinesExcel.xlsx");
+//        url.setText("D:\\Pulpit/medicinesExcel.xlsx");
+        url.setText("jdbc:mysql://localhost:3306/medicines");
+        username.setText("root");
+        password.setText("MarekZolek93!");
 
         add(contPanel);
         setSize(WIDTH,HEIGHT);
@@ -62,6 +94,14 @@ public class AppForm extends JFrame {
 
     }
 
+    public JPanel getContPanel() {
+        return contPanel;
+    }
+
+    public JPanel getMenuPanel() {
+        return menuPanel;
+    }
+
     public JButton getAddNewDatabaseButton() {
         return addNewDatabaseButton;
     }
@@ -70,36 +110,36 @@ public class AppForm extends JFrame {
         return showAllDataButton;
     }
 
-    public JTextField getUsername() {
-        return username;
+    public JPanel getConnectPanel() {
+        return connectPanel;
     }
 
     public JTextField getUrl() {
         return url;
     }
 
-    public JRadioButton getExcelFileRadioButton() {
-        return excelFileRadioButton;
+    public JTextField getUsername() {
+        return username;
     }
 
     public JTextField getPassword() {
         return password;
     }
 
-    public JTable getAllFromAddMedicinesTable() {
-        return allFromAddMedicinesTable;
+    public JRadioButton getExcelFileRadioButton() {
+        return excelFileRadioButton;
     }
 
     public JButton getBackFromAddButton() {
         return backFromAddButton;
     }
 
-    public JButton getSaveFromAddButton() {
-        return saveFromAddButton;
-    }
-
     public JButton getConnectButton() {
         return connectButton;
+    }
+
+    public JPanel getAllMedicinesPanel() {
+        return allMedicinesPanel;
     }
 
     public JTable getAllMedicinesTable() {
@@ -110,23 +150,115 @@ public class AppForm extends JFrame {
         return backFromAllButton;
     }
 
-    public JPanel getMenuPanel() {
-        return menuPanel;
+    public JPanel getCombinePanel() {
+        return combinePanel;
     }
 
-    public JPanel getAllMedicinesPanel() {
-        return allMedicinesPanel;
+    public JTextField getUrlTextField() {
+        return urlTextField;
     }
 
-    public JPanel getConnectPanel() {
-        return connectPanel;
+    public JTextField getUsernameTextField() {
+        return usernameTextField;
+    }
+
+    public JTextField getPasswordTextField() {
+        return passwordTextField;
+    }
+
+    public JComboBox getNameComboBox() {
+        return nameComboBox;
+    }
+
+    public JComboBox getManufacturerComboBox() {
+        return manufacturerComboBox;
+    }
+
+    public JComboBox getInternationalNameOfIngredientsComboBox() {
+        return internationalNameOfIngredientsComboBox;
+    }
+
+    public JComboBox getFormComboBox() {
+        return formComboBox;
+    }
+
+    public JComboBox getDoseComboBox() {
+        return doseComboBox;
+    }
+
+    public JComboBox getQuantityInPackageComboBox() {
+        return quantityInPackageComboBox;
+    }
+
+    public JLabel getNameLabel() {
+        return nameLabel;
+    }
+
+    public JLabel getManufacturerLabel() {
+        return manufacturerLabel;
+    }
+
+    public JLabel getInternationalNameOfIngredientsLabel() {
+        return internationalNameOfIngredientsLabel;
+    }
+
+    public JLabel getFormLabel() {
+        return formLabel;
+    }
+
+    public JLabel getDoseLabel() {
+        return doseLabel;
+    }
+
+    public JLabel getQuantityInPackageLabel() {
+        return quantityInPackageLabel;
+    }
+
+    public JPanel getFinalConnectPanel() {
+        return finalConnectPanel;
+    }
+
+    public JButton getSaveFromAddButton() {
+        return saveFromAddButton;
+    }
+
+    public JButton getBackFromFinalAddButton() {
+        return backFromFinalAddButton;
+    }
+
+    public JTextField getUrlFinalAdd() {
+        return urlFinalAdd;
+    }
+
+    public JTextField getUsernameFinalAdd() {
+        return usernameFinalAdd;
+    }
+
+    public JTextField getPasswordFinalAdd() {
+        return passwordFinalAdd;
+    }
+
+    public JRadioButton getExcelFileRadioButtonFinalAdd() {
+        return excelFileRadioButtonFinalAdd;
+    }
+
+    public JTable getAllFromAddMedicinesTable() {
+        return allFromAddMedicinesTable;
+    }
+
+    public JRadioButton getExcelFileRadioButtonSecondAdd() {
+        return excelFileRadioButtonSecondAdd;
     }
 
     public CardLayout getCardLayout() {
         return cardLayout;
     }
 
-    public JPanel getContPanel() {
-        return contPanel;
+    public JButton getBackFromSecondAddButton() {
+        return backFromSecondAddButton;
+    }
+
+    public JButton getNextButton() {
+        return nextButton;
     }
 }

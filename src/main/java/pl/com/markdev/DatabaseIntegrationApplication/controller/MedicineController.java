@@ -6,12 +6,16 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import pl.com.markdev.DatabaseIntegrationApplication.CombineColumn;
 import pl.com.markdev.DatabaseIntegrationApplication.cfg.MyDataSource;
 import pl.com.markdev.DatabaseIntegrationApplication.dao.MedicineDAO;
 import pl.com.markdev.DatabaseIntegrationApplication.forms.AppForm;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
+import pl.com.markdev.DatabaseIntegrationApplication.model.TableModel;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -30,6 +34,9 @@ import java.util.List;
 public class MedicineController {
 
     @Autowired
+    private CombineColumn combineColumn;
+
+    @Autowired
     private AppForm appForm;
 
     @Autowired
@@ -41,10 +48,14 @@ public class MedicineController {
     @Autowired
     private MedicineDAO medicineDAO;
 
+    @Autowired
+    private CombineMedicinesController combineMedicinesController;
+
     private String url;
     private String username;
     private String password;
     List<MedicineModel> medicineModels = new ArrayList<>();
+    List<TableModel> columnNames = new ArrayList<>();
 
     private JTextField urlField;
     private JTextField usernameField;
@@ -54,6 +65,22 @@ public class MedicineController {
     private JRadioButton excelFile;
     private JButton saveButton;
     private JButton backButton;
+
+    private JComboBox nameComboBox;
+    private JComboBox manufacturerComboBox;
+    private JComboBox internationalNameOfIngredientsComboBox;
+    private JComboBox formComboBox;
+    private JComboBox doseComboBox;
+    private JComboBox quantityInPackageComboBox;
+    private JLabel nameLabel;
+    private JLabel manufacturerLabel;
+    private JLabel internationalNameOfIngredientsLabel;
+    private JLabel formLabel;
+    private JLabel doseLabel;
+    private JLabel quantityInPackageLabel;
+    List<JComboBox> jComboBoxes = new ArrayList<>();
+
+
 
     public void initView() {
 
@@ -65,6 +92,8 @@ public class MedicineController {
         excelFile = appForm.getExcelFileRadioButton();
         saveButton = appForm.getSaveFromAddButton();
         backButton = appForm.getBackFromAddButton();
+
+        excelFile.setVisible(true);
 
         excelFile.addActionListener(new ActionListener() {
             @Override
@@ -108,10 +137,10 @@ public class MedicineController {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                saveButton.setVisible(true);
                 url = urlField.getText();
                 username = usernameField.getText();
                 password = passwordField.getText();
+
 
                 if (excelFile.isSelected()) {
                     try {
@@ -155,13 +184,17 @@ public class MedicineController {
                     dataSource.setUsername(username);
                     dataSource.setPassword(password);
 
-                    medicineModels = medicineDAO.allMedicines();
+                    appForm.getCardLayout().show(appForm.getContPanel(), "combinePanel");
+                    combineMedicinesController.initView();
+
+
+//                    medicineModels = medicineDAO.allMedicines();
 
                 }
-                DefaultTableModel defaultTableModel = getDefaultTableModel();
-                fillTable(medicineModels, defaultTableModel);
-
-                table1.setModel(defaultTableModel);
+//                DefaultTableModel defaultTableModel = getDefaultTableModel();
+//                fillTable(medicineModels, defaultTableModel);
+//
+//                table1.setModel(defaultTableModel);
             }
 
         });

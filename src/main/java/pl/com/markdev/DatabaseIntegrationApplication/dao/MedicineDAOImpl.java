@@ -5,7 +5,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import pl.com.markdev.DatabaseIntegrationApplication.cfg.MyDataSource;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
+import pl.com.markdev.DatabaseIntegrationApplication.model.TableModel;
 import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.MedicineMapper;
+import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.TableMapper;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -21,7 +23,34 @@ public class MedicineDAOImpl implements MedicineDAO {
     private MyDataSource dataSource;
 
     @Autowired
+    private MedicineMapper medicineMapper;
+
+    @Autowired
     private JdbcTemplate jdbc;
+
+    @Override
+    public List<TableModel> columnNames(){
+        String SQL = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'MEDICINES'";
+        List<TableModel> tableModels = new ArrayList<>();
+
+        Connection conn = null;
+        try {
+            conn = dataSource.getConnection();
+            tableModels = jdbc.query(SQL, new TableMapper());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return tableModels;
+    }
 
     @Override
     public List<MedicineModel> allMedicines() {
@@ -31,7 +60,7 @@ public class MedicineDAOImpl implements MedicineDAO {
         Connection conn = null;
         try {
             conn = dataSource.getConnection();
-            medicines = jdbc.query(SQL, new MedicineMapper());
+            medicines = jdbc.query(SQL, medicineMapper);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -64,6 +93,7 @@ public class MedicineDAOImpl implements MedicineDAO {
                     rowMedicine[i] = collect.get(i).replace("'", "`");
                 }
             }
+
             MedicineModel medicineModel = new MedicineModel();
             medicineModel.setId((long) Math.round(Double.parseDouble(rowMedicine[0])));
             medicineModel.setName(rowMedicine[1]);
