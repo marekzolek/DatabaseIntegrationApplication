@@ -7,7 +7,6 @@ import pl.com.markdev.DatabaseIntegrationApplication.dao.MedicineDAO;
 import pl.com.markdev.DatabaseIntegrationApplication.forms.AppForm;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
 
-import javax.sql.DataSource;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
@@ -44,9 +43,9 @@ public class FinalAddMedicineController {
     private JRadioButton excelFileRadioButtonFinalAdd;
     private JTable allFromAddMedicinesTable;
 
-    List<MedicineModel> medicineModels;
+    private List<MedicineModel> medicineModels;
 
-    public void initView(){
+    public void initView(List<String> rows){
 
         saveFromAddButton = appForm.getSaveFromAddButton();
         backFromFinalAddButton = appForm.getBackFromFinalAddButton();
@@ -68,7 +67,11 @@ public class FinalAddMedicineController {
         passwordFinalAdd.setEditable(false);
 
         medicineModels = new ArrayList<>();
-        medicineModels = medicineDAO.allMedicines();
+        if (appForm.getExcelFileRadioButton().isSelected()){
+            medicineModels = medicineDAO.allMedicinesFromExcel(rows);
+        } else {
+            medicineModels = medicineDAO.allMedicines();
+        }
         DefaultTableModel defaultTableModel = getDefaultTableModel();
         fillTable(medicineModels,defaultTableModel);
 
@@ -78,14 +81,10 @@ public class FinalAddMedicineController {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                dataSource.setUrl("jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp");
-                dataSource.setUsername("sa");
-                dataSource.setPassword("");
-
-                medicineDAO.saveAll(medicineModels);
 
                 appForm.getCardLayout().show(appForm.getContPanel(), "allMedicinesPanel");
                 allMedicinesController.initView();
+                medicineDAO.saveAll(medicineModels);
 
             }
         });

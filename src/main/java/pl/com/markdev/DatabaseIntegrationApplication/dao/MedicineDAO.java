@@ -14,4 +14,6 @@ public interface MedicineDAO {
     List<MedicineModel> allMedicinesFromExcel(List<String> rows);
 
     void saveAll(List<MedicineModel> medicines);
+
+    List<MedicineModel> allMedicinesFromMainDatabase();
 }

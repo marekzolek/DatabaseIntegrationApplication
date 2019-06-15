@@ -80,10 +80,12 @@ public class AppForm extends JFrame {
         contPanel.add(combinePanel, "combinePanel");
         contPanel.add(finalConnectPanel, "finalConnectPanel");
 
-//        url.setText("D:\\Pulpit/medicinesExcel.xlsx");
-        url.setText("jdbc:mysql://localhost:3306/medicines");
-        username.setText("root");
-        password.setText("MarekZolek93!");
+        url.setText("D:\\Pulpit/medicinesExcel.xlsx");
+//        url.setText("jdbc:mysql://localhost:3306/medicines");
+//        username.setText("root");
+//        password.setText("MarekZolek93!");
+
+        excelFileRadioButtonSecondAdd = excelFileRadioButton;
 
         add(contPanel);
         setSize(WIDTH,HEIGHT);
@@ -98,20 +100,12 @@ public class AppForm extends JFrame {
         return contPanel;
     }
 
-    public JPanel getMenuPanel() {
-        return menuPanel;
-    }
-
     public JButton getAddNewDatabaseButton() {
         return addNewDatabaseButton;
     }
 
     public JButton getShowAllDataButton() {
         return showAllDataButton;
-    }
-
-    public JPanel getConnectPanel() {
-        return connectPanel;
     }
 
     public JTextField getUrl() {
@@ -138,20 +132,12 @@ public class AppForm extends JFrame {
         return connectButton;
     }
 
-    public JPanel getAllMedicinesPanel() {
-        return allMedicinesPanel;
-    }
-
     public JTable getAllMedicinesTable() {
         return allMedicinesTable;
     }
 
     public JButton getBackFromAllButton() {
         return backFromAllButton;
-    }
-
-    public JPanel getCombinePanel() {
-        return combinePanel;
     }
 
     public JTextField getUrlTextField() {
@@ -212,10 +198,6 @@ public class AppForm extends JFrame {
 
     public JLabel getQuantityInPackageLabel() {
         return quantityInPackageLabel;
-    }
-
-    public JPanel getFinalConnectPanel() {
-        return finalConnectPanel;
     }
 
     public JButton getSaveFromAddButton() {

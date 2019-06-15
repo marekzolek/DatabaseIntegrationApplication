@@ -3,7 +3,6 @@ package pl.com.markdev.DatabaseIntegrationApplication.model.mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import pl.com.markdev.DatabaseIntegrationApplication.CombineColumn;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
 

@@ -7,6 +7,7 @@ import pl.com.markdev.DatabaseIntegrationApplication.cfg.MyDataSource;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
 import pl.com.markdev.DatabaseIntegrationApplication.model.TableModel;
 import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.MedicineMapper;
+import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.MedicineMapperFromMainDatabase;
 import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.TableMapper;
 
 import java.sql.Connection;
@@ -32,7 +33,6 @@ public class MedicineDAOImpl implements MedicineDAO {
     public List<TableModel> columnNames(){
         String SQL = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'MEDICINES'";
         List<TableModel> tableModels = new ArrayList<>();
-
         Connection conn = null;
         try {
             conn = dataSource.getConnection();
@@ -95,13 +95,12 @@ public class MedicineDAOImpl implements MedicineDAO {
             }
 
             MedicineModel medicineModel = new MedicineModel();
-            medicineModel.setId((long) Math.round(Double.parseDouble(rowMedicine[0])));
-            medicineModel.setName(rowMedicine[1]);
-            medicineModel.setManufacturer(rowMedicine[2]);
-            medicineModel.setInternationalNamesOfIngredients(rowMedicine[3]);
-            medicineModel.setForm(rowMedicine[4]);
-            medicineModel.setDose(rowMedicine[5]);
-            medicineModel.setQuantityInPackage(rowMedicine[6]);
+            medicineModel.setName(rowMedicine[0]);
+            medicineModel.setManufacturer(rowMedicine[1]);
+            medicineModel.setInternationalNamesOfIngredients(rowMedicine[2]);
+            medicineModel.setForm(rowMedicine[3]);
+            medicineModel.setDose(rowMedicine[4]);
+            medicineModel.setQuantityInPackage(rowMedicine[5]);
             result.add(medicineModel);
         }
 
@@ -113,6 +112,11 @@ public class MedicineDAOImpl implements MedicineDAO {
 
         Connection conn = null;
         try {
+
+            dataSource.setUrl("jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp");//jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp, jdbc:mysql://localhost:3306/maindatabase
+            dataSource.setUsername("sa");//sa, root
+            dataSource.setPassword("");// , MarekZolek93
+
             conn = dataSource.getConnection();
 
             String SQL;
@@ -137,6 +141,30 @@ public class MedicineDAOImpl implements MedicineDAO {
                 }
             }
         }
+    }
+
+    @Override
+    public List<MedicineModel> allMedicinesFromMainDatabase() {
+        String SQL = "SELECT * FROM medicines";
+        List<MedicineModel> medicines = new ArrayList<>();
+
+        Connection conn = null;
+        try {
+            conn = dataSource.getConnection();
+            medicines = jdbc.query(SQL, new MedicineMapperFromMainDatabase());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return medicines;
     }
 
 }
