@@ -1,24 +1,54 @@
 package pl.com.markdev.DatabaseIntegrationApplication.dao;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import pl.com.markdev.DatabaseIntegrationApplication.cfg.MyDataSource;
+import pl.com.markdev.DatabaseIntegrationApplication.component.ColumnList;
+import pl.com.markdev.DatabaseIntegrationApplication.component.CombineColumn;
+import pl.com.markdev.DatabaseIntegrationApplication.model.DatabaseModel;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
 import pl.com.markdev.DatabaseIntegrationApplication.model.TableModel;
-import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.MedicineMapper;
-import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.MedicineMapperFromMainDatabase;
+import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.DatabaseMapper;
 import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.TableMapper;
+import pl.com.markdev.DatabaseIntegrationApplication.model.mapper.MedicineMapper;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Repository
 public class MedicineDAOImpl implements MedicineDAO {
+
+    @Value("$(MAIN_DATABASE_URL)")
+    private String mainDatabaseUrl;
+
+    @Value("$(MAIN_DATABASE_USERNAME)")
+    private String mainDatabaseUsername;
+
+    @Value("$(MAIN_DATABASE_PASSWORD)")
+    private String mainDatabasePassword;
+
+    @Autowired
+    private CombineColumn combineColumn;
+
+    @Autowired
+    private ColumnList columnList;
 
     @Autowired
     private MyDataSource dataSource;
@@ -30,141 +60,111 @@ public class MedicineDAOImpl implements MedicineDAO {
     private JdbcTemplate jdbc;
 
     @Override
-    public List<TableModel> columnNames(){
-        String SQL = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'MEDICINES'";
-        List<TableModel> tableModels = new ArrayList<>();
-        Connection conn = null;
+    public List<DatabaseModel> databaseTables() {
+
+        String SQL = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'";
+        List<DatabaseModel> databaseTables = new ArrayList<>();
+
+        try (Connection conn = dataSource.getConnection()){
+
+            databaseTables = jdbc.query(SQL, new DatabaseMapper());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return databaseTables;
+    }
+
+    @Override
+    public Map<String, Integer> columnNamesFromExcel(final int tableIndex, final String url) {
+
+        Map<String, Integer> excelColumnMap = new HashMap<>();
         try {
-            conn = dataSource.getConnection();
+
+            FileInputStream excelDatabase = new FileInputStream(new File(url));
+            XSSFWorkbook workbook = new XSSFWorkbook(excelDatabase);
+
+            XSSFSheet sheet = workbook.getSheetAt(tableIndex);
+            Iterator<Row> rowIterator = sheet.iterator();
+            Row head = rowIterator.next();
+            Iterator<Cell> headCellIterator = head.cellIterator();
+            int column = 0;
+            while (headCellIterator.hasNext()) {
+                Cell cell = headCellIterator.next();
+                excelColumnMap.put(cell.getStringCellValue(), column++);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return excelColumnMap;
+
+    }
+
+    @Override
+    public List<TableModel> columnNames(final String tableName) {
+
+        String SQL = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = '" + tableName + "';";
+        List<TableModel> tableModels = new ArrayList<>();
+
+        try (Connection conn = dataSource.getConnection()){
+
             tableModels = jdbc.query(SQL, new TableMapper());
 
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
         }
         return tableModels;
     }
 
     @Override
-    public List<MedicineModel> allMedicines() {
-        String SQL = "SELECT * FROM medicines";
+    public List<MedicineModel> allMedicines(String tableName) {
+
+        String SQL = "SELECT * FROM " + tableName +";";
         List<MedicineModel> medicines = new ArrayList<>();
 
-        Connection conn = null;
-        try {
-            conn = dataSource.getConnection();
+        try (Connection conn = dataSource.getConnection()){
+
             medicines = jdbc.query(SQL, medicineMapper);
 
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
         }
         return medicines;
     }
 
     @Override
-    public List<MedicineModel> allMedicinesFromExcel(List<String> rows) {
+    public List<MedicineModel> allMedicinesFromExcel(List<String> rows, int numberOfColumnsInExcel, Map<String, Integer> excelColumnMap) {
 
-        List<MedicineModel> result = new ArrayList<>();
-        String[] rowMedicine = new String[7];
+        List<MedicineModel> testMedicineModels = new ArrayList<>();
 
+        String[] rowMedicine = new String[columnList.getColumnList().size()];
 
-        for (String row : rows) {
-            String[] med = row.split("/t");
+        for (int i = 1; i < rows.size(); i++) {
+            String[] med = rows.get(i).split("/t");
             List<String> collect = Arrays.stream(med).collect(Collectors.toList());
-            for (int i = 0; i < rowMedicine.length; i++) {
-                if (i >= collect.size()) {
-                    rowMedicine[i] = "";
+            for (int j = 0; j < rowMedicine.length; j++) {
+                if (j >= collect.size()) {
+                    rowMedicine[j] = "";
                 } else {
-                    rowMedicine[i] = collect.get(i).replace("'", "`");
+                    rowMedicine[j] = collect.get(j).replace("'", "`");
                 }
             }
 
             MedicineModel medicineModel = new MedicineModel();
-            medicineModel.setName(rowMedicine[0]);
-            medicineModel.setManufacturer(rowMedicine[1]);
-            medicineModel.setInternationalNamesOfIngredients(rowMedicine[2]);
-            medicineModel.setForm(rowMedicine[3]);
-            medicineModel.setDose(rowMedicine[4]);
-            medicineModel.setQuantityInPackage(rowMedicine[5]);
-            result.add(medicineModel);
-        }
-
-        return result;
-    }
-
-    @Override
-    public void saveAll(List<MedicineModel> medicines) {
-
-        Connection conn = null;
-        try {
-
-            dataSource.setUrl("jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp");//jdbc:h2:tcp://localhost/~/DatabaseIntegrationApp, jdbc:mysql://localhost:3306/maindatabase
-            dataSource.setUsername("sa");//sa, root
-            dataSource.setPassword("");// , MarekZolek93
-
-            conn = dataSource.getConnection();
-
-            String SQL;
-            for (MedicineModel medicine : medicines) {
-                SQL = "INSERT INTO MEDICINES (NAME, MANUFACTURER, INTERNATIONAL_NAME_OF_INGREDIENTS, FORM, DOSE, QUANTITY_IN_PACKAGE) VALUES("
-                        + "'" + medicine.getName() + "', "
-                        + "'" + medicine.getManufacturer() + "', "
-                        + "'" + medicine.getInternationalNamesOfIngredients() + "', "
-                        + "'" + medicine.getForm() + "', "
-                        + "'" + medicine.getDose() + "', "
-                        + "'" + medicine.getQuantityInPackage() + "');";
-                jdbc.execute(SQL);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
+            for (String mainDatabaseColumn : combineColumn.keySet()) {
+                for (String excelColumn : excelColumnMap.keySet()) {
+                    if (excelColumn.equals(combineColumn.get(mainDatabaseColumn))) {
+                        medicineModel.put(mainDatabaseColumn, rowMedicine[excelColumnMap.get(excelColumn) - 1]);
+                    }
                 }
             }
+            testMedicineModels.add(medicineModel);
         }
-    }
-
-    @Override
-    public List<MedicineModel> allMedicinesFromMainDatabase() {
-        String SQL = "SELECT * FROM medicines";
-        List<MedicineModel> medicines = new ArrayList<>();
-
-        Connection conn = null;
-        try {
-            conn = dataSource.getConnection();
-            medicines = jdbc.query(SQL, new MedicineMapperFromMainDatabase());
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return medicines;
+        return testMedicineModels;
     }
 
 }

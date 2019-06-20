@@ -2,7 +2,11 @@ package pl.com.markdev.DatabaseIntegrationApplication.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import pl.com.markdev.DatabaseIntegrationApplication.component.ColumnList;
+import pl.com.markdev.DatabaseIntegrationApplication.dao.MainDatabaseDAO;
 import pl.com.markdev.DatabaseIntegrationApplication.forms.AppForm;
+import pl.com.markdev.DatabaseIntegrationApplication.model.DatabaseModel;
+import pl.com.markdev.DatabaseIntegrationApplication.model.TableModel;
 
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
@@ -27,7 +31,6 @@ public class MenuController {
 
         addNewDatabase = appForm.getAddNewDatabaseButton();
         showAllData = appForm.getShowAllDataButton();
-        appForm.getCardLayout().show(appForm.getContPanel(), "menuPanel");
 
         addNewDatabase.addActionListener(new ActionListener() {
             @Override
@@ -40,7 +43,7 @@ public class MenuController {
         showAllData.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                appForm.getCardLayout().show(appForm.getContPanel(),"allMedicinesPanel");
+                appForm.getCardLayout().show(appForm.getContPanel(), "allMedicinesPanel");
                 allMedicinesController.initView();
             }
         });

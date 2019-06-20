@@ -5,17 +5,14 @@ import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
 import pl.com.markdev.DatabaseIntegrationApplication.model.TableModel;
 
 import java.util.List;
-import java.util.Map;
 
-public interface MedicineDAO {
+public interface MainDatabaseDAO {
 
     List<DatabaseModel> databaseTables();
 
-    Map<String, Integer> columnNamesFromExcel(int tableIndex, String url);
+    List<TableModel> columnNames(String tableName);
 
-    List<TableModel> columnNames(final String tableName);
+    void saveAll(List<MedicineModel> medicines, String tableName);
 
     List<MedicineModel> allMedicines(final String tableName);
-
-    List<MedicineModel> allMedicinesFromExcel(List<String> rows, int numberOfColumnsInExcel, Map<String, Integer> excelColumnMap);
 }

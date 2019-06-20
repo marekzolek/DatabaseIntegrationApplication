@@ -2,31 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e57ead0c-ad6b-47fc-9a75-35a7e5d9d7a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/component/ColumnList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/DatabaseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/DatabaseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/CombineColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/CombineColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/CombineColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/component/CombineColumn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DatabaseIntegrationApplication-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DatabaseIntegrationApplication-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/CombineColumn.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController$4.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController$2.class" afterDir="false" />
@@ -34,6 +44,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.com.markdev.DatabaseIntegrationApplication.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.com.markdev.DatabaseIntegrationApplication.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/pl.com.markdev.DatabaseIntegrationApplication.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/pl.com.markdev.DatabaseIntegrationApplication.AppTest.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,10 +66,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="510">
+              <caret line="188" column="43" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#12528#13286#0" />
+                <element signature="e#13277#13949#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/cfg/MyDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,10 +92,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/component/CombineColumn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="26" column="101" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="101" />
+            <state relative-caret-position="180">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,10 +104,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/App.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="294">
+              <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,70 +116,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/CombineColumn.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/TableMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/TableModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2986">
-              <caret line="238" column="25" selection-start-line="238" selection-start-column="25" selection-end-line="238" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="462">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,17 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/DetailListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/Test.form" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MainFrame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/Medicine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MedicineDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/Medicines.form" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/Medicines.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/ConnectListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MedicineDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MedicineMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MedicineForm.form" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MedicineController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MedicineForm.java" />
@@ -196,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/entity/mapperEntity/MedicineMapperEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/entity/MedicineEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/repository/MedicineRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AllMedicines.form" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/MedicineForm.form" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/MenuForm.form" />
@@ -207,28 +166,40 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/MedicineForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AllMedicines.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/ApplicationForm.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/cfg/MyDataSource.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/cfg/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/combineColumn.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/TableModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/TableMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.form" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/finalAddMedicineController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/ExcelComumnMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/ExcelColumnMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/CombineColumn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/BatabaseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/DatabaseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/entity/ColumnList.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/TestMedicineModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/TestMedicineMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/DatabaseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/component/CombineColumn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/component/ColumnList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.form" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController.java" />
       </list>
     </option>
   </component>
@@ -261,10 +232,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="65" />
+    <option name="y" value="-19" />
+    <option name="width" value="1379" />
+    <option name="height" value="740" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -272,8 +243,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,6 +294,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DatabaseIntegrationApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,19 +338,7 @@
               <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DatabaseIntegrationApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -379,24 +347,25 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="205" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="358" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560637524814" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="123" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="279" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561047176423" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MK_groupProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../B2BNetwork/B2BNetwork - projekty z zajęć/PunkAPI" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Pulpit\DatabaseIntegrationApplication\src\main\java\pl\com\markdev\DatabaseIntegrationApplication\forms" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.com.markdev.DatabaseIntegrationApplication" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pl.com.markdev.DatabaseIntegrationApplication.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Pulpit\DatabaseIntegrationApplication\src\main\java\pl\com\markdev\DatabaseIntegrationApplication\forms" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -448,9 +417,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81522954" visible="true" weight="0.21100917" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81522954" visible="true" weight="0.2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -462,8 +430,8 @@
       <window_info id="Job Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32586786" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3393057" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30795074" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43225083" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3706607" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -474,9 +442,9 @@
       <window_info anchor="bottom" id="Console" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24981132" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24954128" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3296636" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.25688073" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
@@ -488,114 +456,37 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.java</url>
-          <line>95</line>
+          <line>181</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="combineColumn" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/DetailListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/MainFrame.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="1631" column="23" lean-forward="true" selection-start-line="1631" selection-start-column="23" selection-end-line="1631" selection-end-column="23" />
-          <folding>
-            <element signature="e#55982#55983#0" expanded="true" />
-            <element signature="e#56005#56006#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1013" column="18" lean-forward="true" selection-start-line="1013" selection-start-column="18" selection-end-line="1013" selection-end-column="18" />
-          <folding>
-            <element signature="e#35456#35457#0" expanded="true" />
-            <element signature="e#35491#35492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/swing/JFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="670" column="21" selection-start-line="670" selection-start-column="21" selection-end-line="670" selection-end-column="21" />
-          <folding>
-            <element signature="e#23469#23470#0" expanded="true" />
-            <element signature="e#23522#23523#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9/poi-3.9.jar!/org/apache/poi/ss/usermodel/Cell.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/repository/MedicineRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/entity/mapperEntity/MedicineMapperEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/entity/MedicineEntity.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/sql/CommonDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/MenuForm.form" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AllMedicines.form" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/MedicineForm.form" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/MedicineForm.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AllMedicines.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/ApplicationForm.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/MenuForm.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DatabaseIntegrationApplication.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12705#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" />
+    <entry file="file://$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" />
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -611,15 +502,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3119">
-          <folding>
-            <element signature="e#0#6638#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/2.0.6/spring-jdbc-2.0.6.jar!/org/springframework/jdbc/core/RowMapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -631,13 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="3132" selection-start-line="3132" selection-end-line="3132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/2.0.6/spring-jdbc-2.0.6.jar!/org/springframework/jdbc/core/RowMapperResultSetExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -655,27 +531,197 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/ExcelColumnMap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/ExcelColumnMap.java" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/schemas/maven-4.0.0.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="239">
+          <caret line="740" column="6" selection-start-line="740" selection-start-column="6" selection-end-line="740" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+    <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/java/pl/com/markdev/DatabaseIntegrationApplication/entity/QColumnList.java" />
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.0.5.RELEASE/spring-boot-dependencies-2.0.5.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26840">
+          <caret line="1363" column="41" selection-start-line="1363" selection-start-column="25" selection-end-line="1363" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="956" selection-start-line="956" selection-end-line="956" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel1.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/2.0.6/spring-jdbc-2.0.6.jar!/org/springframework/jdbc/core/RowMapperResultSetExtractor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/swing/JComboBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="764" column="16" selection-start-line="764" selection-start-column="16" selection-end-line="764" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/cfg/DatabaseConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="20">
+          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="105" column="71" selection-start-line="105" selection-start-column="71" selection-end-line="105" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/DatabaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="127" selection-start-line="25" selection-start-column="127" selection-end-line="25" selection-end-column="127" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/TableMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/DatabaseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/TableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1671">
+          <caret line="125" column="135" selection-start-line="125" selection-start-column="135" selection-end-line="125" selection-end-column="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/component/ColumnList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,138 +736,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AllMedicinesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/CombineMedicinesController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2060">
-          <caret line="103" column="70" selection-start-line="103" selection-start-column="70" selection-end-line="103" selection-end-column="70" />
+        <state relative-caret-position="320">
+          <caret line="65" column="21" lean-forward="true" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/FinalAddMedicineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="115" column="44" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6301#6302#0" expanded="true" />
+            <element signature="e#6333#6334#0" expanded="true" />
+            <element signature="e#6372#6373#0" expanded="true" />
+            <element signature="e#6407#6408#0" expanded="true" />
+            <element signature="e#6451#6452#0" expanded="true" />
+            <element signature="e#6491#6492#0" expanded="true" />
+            <element signature="e#6535#6536#0" expanded="true" />
+            <element signature="e#6575#6576#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MedicineController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="188" column="43" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12528#13286#0" />
+            <element signature="e#13277#13949#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/cfg/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/component/CombineColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="1621" column="26" selection-start-line="1621" selection-start-column="26" selection-end-line="1621" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/CardLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="546" column="26" selection-start-line="546" selection-start-column="26" selection-end-line="546" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="3309" column="16" selection-start-line="3309" selection-start-column="16" selection-end-line="3309" selection-end-column="16" />
+          <folding>
+            <element signature="e#114480#114481#0" expanded="true" />
+            <element signature="e#114527#114528#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="462">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MedicineDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AppForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2986">
-          <caret line="238" column="25" selection-start-line="238" selection-start-column="25" selection-end-line="238" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="26" column="101" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/MedicineMapperFromMainDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/mapper/TableMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/MedicineModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/model/TableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/CombineColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
