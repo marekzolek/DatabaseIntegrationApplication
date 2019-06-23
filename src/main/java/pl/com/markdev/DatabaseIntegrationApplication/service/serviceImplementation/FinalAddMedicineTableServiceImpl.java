@@ -35,9 +35,9 @@ public class FinalAddMedicineTableServiceImpl implements FinalAddMedicineTableSe
     public void fillTable(List<MedicineModel> medicineModels, DefaultTableModel defaultTableModel) {
 
         for (MedicineModel medicineModel : medicineModels) {
-            Object[] objects = new Object[medicineModel.keySet().size()];
-            for (int i = 0; i < medicineModel.keySet().size(); i++) {
-                objects[defaultTableModel.findColumn(columnList.getColumnList().get(i))] = medicineModel.get(columnList.getColumnList().get(i));
+            Object[] objects = new Object[medicineModel.getMedicineModelMap().keySet().size()];
+            for (int i = 0; i < medicineModel.getMedicineModelMap().keySet().size(); i++) {
+                objects[defaultTableModel.findColumn(columnList.getColumnList().get(i))] = medicineModel.getMedicineModelMap().get(columnList.getColumnList().get(i));
             }
             defaultTableModel.addRow(objects);
         }

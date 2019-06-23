@@ -38,7 +38,8 @@ public class MainDatabaseServiceImpl implements MainDatabaseService {
     @Override
     public void fillColumnComboBox(final String tableName) {
         appForm.getColumnFromMainDatabaseComboBox().removeAllItems();
-        for (TableModel mainDatabaseColumnName : allColumns(tableName)) {
+        List<TableModel> tableModels = allColumns(tableName);
+        for (TableModel mainDatabaseColumnName : tableModels) {
             appForm.getColumnFromMainDatabaseComboBox().addItem(mainDatabaseColumnName.getColumnName());
         }
 

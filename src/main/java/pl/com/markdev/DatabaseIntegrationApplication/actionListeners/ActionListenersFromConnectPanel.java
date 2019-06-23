@@ -103,11 +103,20 @@ public class ActionListenersFromConnectPanel {
                 appForm.getChooseTableButton().setEnabled(false);
                 appForm.getMergeButton().setEnabled(true);
 
+                String url = appForm.getUrl().getText();
+                String username = appForm.getUsername().getText();
+                String password = appForm.getPassword().getText();
+
                 mainDatabaseService.fillColumnComboBox(appForm.getMainDatabaseComboBox().getSelectedItem().toString());
 
                 if (appForm.getExcelFileRadioButton().isSelected()) {
                     newExcelDatabaseService.fillColumnComboBox(appForm.getTableSelectComboBox().getSelectedIndex(), appForm.getUrl().getText());
                 } else {
+
+                    dataSource.setUrl(url);
+                    dataSource.setUsername(username);
+                    dataSource.setPassword(password);
+
                     newDatabaseService.fillColumnFromDatabase(appForm.getTableSelectComboBox().getSelectedItem().toString());
                 }
             }
@@ -120,6 +129,10 @@ public class ActionListenersFromConnectPanel {
         ActionListener result = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                String url = appForm.getUrl().getText();
+                String username = appForm.getUsername().getText();
+                String password = appForm.getPassword().getText();
 
                 String mainDatabaseColumn = appForm.getColumnFromMainDatabaseComboBox().getSelectedItem().toString();
                 String newDatabaseColumn = appForm.getColumnFromOtherDatabaseComboBox().getSelectedItem().toString();
@@ -136,6 +149,11 @@ public class ActionListenersFromConnectPanel {
                 if (appForm.getExcelFileRadioButton().isSelected()) {
                     newExcelDatabaseService.fillColumnComboBoxIfNotExistInMergeTable(tempNewColumns, appForm.getTableSelectComboBox().getSelectedIndex(), appForm.getUrl().getText());
                 } else {
+
+                    dataSource.setUrl(url);
+                    dataSource.setUsername(username);
+                    dataSource.setPassword(password);
+
                     newDatabaseService.fillColumnComboBoxIfNotExistInMergeTable(tempNewColumns, appForm.getTableSelectComboBox().getSelectedItem().toString());
                 }
             }
@@ -210,6 +228,7 @@ public class ActionListenersFromConnectPanel {
                     dataSource.setUrl(url);
                     dataSource.setUsername(username);
                     dataSource.setPassword(password);
+
                     medicineModels = newDatabaseService.allMedicines(appForm.getTableSelectComboBox().getSelectedItem().toString());
 
                 }

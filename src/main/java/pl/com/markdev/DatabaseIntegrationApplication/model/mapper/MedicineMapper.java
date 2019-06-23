@@ -17,10 +17,10 @@ public class MedicineMapper implements RowMapper {
 
     @Override
     public MedicineModel mapRow(ResultSet resultSet, int i) throws SQLException {
-        MedicineModel testMedicineModel = new MedicineModel();
-        for (String newDatabaseColumn : combineColumn.getCombineColumn().values()) {
-        testMedicineModel.getMedicineModelMap().put(newDatabaseColumn, resultSet.getString(newDatabaseColumn));
+        MedicineModel medicineModel = new MedicineModel();
+        for (String columnName : combineColumn.getCombineColumn().keySet()) {
+            medicineModel.getMedicineModelMap().put(columnName, resultSet.getString(combineColumn.getCombineColumn().get(columnName)));
         }
-        return testMedicineModel;
+        return medicineModel;
     }
 }

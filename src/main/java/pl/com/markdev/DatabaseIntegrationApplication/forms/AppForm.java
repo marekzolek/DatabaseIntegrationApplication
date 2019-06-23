@@ -72,10 +72,10 @@ public class AppForm extends JFrame {
         contPanel.add(connectPanel, "connectPanel");
         contPanel.add(finalConnectPanel, "finalConnectPanel");
 
-        url.setText("D:\\Pulpit/medicinesExcel.xlsx");
-//        url.setText("jdbc:mysql://localhost:3306/medicines");
-//        username.setText("root");
-//        password.setText("MarekZolek93!");
+//        url.setText("D:\\Pulpit/medicinesExcel.xlsx");
+        url.setText("jdbc:mysql://localhost:3306/medicines");
+        username.setText("root");
+        password.setText("MarekZolek93!");
 
         columnFromMainDatabaseComboBox.setVisible(false);
         columnFromOtherDatabaseComboBox.setVisible(false);

@@ -31,9 +31,9 @@ public class ActionListenerFromFinalConnectPanel {
         ActionListener result = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                mainDatabaseService.saveAll(medicineModels, appForm.getMainDatabaseComboBox().getSelectedItem().toString());
                 appForm.getCardLayout().show(appForm.getContPanel(), "allMedicinesPanel");
                 allMedicinePanelController.initController();
-                mainDatabaseService.saveAll(medicineModels, appForm.getMainDatabaseComboBox().getSelectedItem().toString());
 
             }
         };

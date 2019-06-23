@@ -35,15 +35,6 @@ import java.util.stream.Collectors;
 @Repository
 public class MedicineDAOImpl implements MedicineDAO {
 
-    @Value("$(MAIN_DATABASE_URL)")
-    private String mainDatabaseUrl;
-
-    @Value("$(MAIN_DATABASE_USERNAME)")
-    private String mainDatabaseUsername;
-
-    @Value("$(MAIN_DATABASE_PASSWORD)")
-    private String mainDatabasePassword;
-
     @Autowired
     private CombineColumn combineColumn;
 
@@ -132,6 +123,7 @@ public class MedicineDAOImpl implements MedicineDAO {
     public List<TableModel> columnNames(final String tableName) {
 
         String SQL = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = '" + tableName + "';";
+
         List<TableModel> tableModels = new ArrayList<>();
 
         try (Connection conn = dataSource.getConnection()) {
