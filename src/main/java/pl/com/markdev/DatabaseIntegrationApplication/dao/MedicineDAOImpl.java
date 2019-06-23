@@ -65,7 +65,7 @@ public class MedicineDAOImpl implements MedicineDAO {
         String SQL = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'";
         List<DatabaseModel> databaseTables = new ArrayList<>();
 
-        try (Connection conn = dataSource.getConnection()){
+        try (Connection conn = dataSource.getConnection()) {
 
             databaseTables = jdbc.query(SQL, new DatabaseMapper());
 
@@ -101,7 +101,31 @@ public class MedicineDAOImpl implements MedicineDAO {
         }
 
         return excelColumnMap;
+    }
 
+    @Override
+    public List<String> columnListFromExcel(final int tableIndex, final String url) {
+        List<String> result = new ArrayList<>();
+        try {
+
+            FileInputStream excelDatabase = new FileInputStream(new File(url));
+            XSSFWorkbook workbook = new XSSFWorkbook(excelDatabase);
+
+            XSSFSheet sheet = workbook.getSheetAt(tableIndex);
+            Iterator<Row> rowIterator = sheet.iterator();
+            Row head = rowIterator.next();
+            Iterator<Cell> headCellIterator = head.cellIterator();
+            while (headCellIterator.hasNext()) {
+                Cell cell = headCellIterator.next();
+                result.add(cell.getStringCellValue());
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @Override
@@ -110,7 +134,7 @@ public class MedicineDAOImpl implements MedicineDAO {
         String SQL = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = '" + tableName + "';";
         List<TableModel> tableModels = new ArrayList<>();
 
-        try (Connection conn = dataSource.getConnection()){
+        try (Connection conn = dataSource.getConnection()) {
 
             tableModels = jdbc.query(SQL, new TableMapper());
 
@@ -123,10 +147,10 @@ public class MedicineDAOImpl implements MedicineDAO {
     @Override
     public List<MedicineModel> allMedicines(String tableName) {
 
-        String SQL = "SELECT * FROM " + tableName +";";
+        String SQL = "SELECT * FROM " + tableName + ";";
         List<MedicineModel> medicines = new ArrayList<>();
 
-        try (Connection conn = dataSource.getConnection()){
+        try (Connection conn = dataSource.getConnection()) {
 
             medicines = jdbc.query(SQL, medicineMapper);
 
@@ -135,36 +159,4 @@ public class MedicineDAOImpl implements MedicineDAO {
         }
         return medicines;
     }
-
-    @Override
-    public List<MedicineModel> allMedicinesFromExcel(List<String> rows, int numberOfColumnsInExcel, Map<String, Integer> excelColumnMap) {
-
-        List<MedicineModel> testMedicineModels = new ArrayList<>();
-
-        String[] rowMedicine = new String[columnList.getColumnList().size()];
-
-        for (int i = 1; i < rows.size(); i++) {
-            String[] med = rows.get(i).split("/t");
-            List<String> collect = Arrays.stream(med).collect(Collectors.toList());
-            for (int j = 0; j < rowMedicine.length; j++) {
-                if (j >= collect.size()) {
-                    rowMedicine[j] = "";
-                } else {
-                    rowMedicine[j] = collect.get(j).replace("'", "`");
-                }
-            }
-
-            MedicineModel medicineModel = new MedicineModel();
-            for (String mainDatabaseColumn : combineColumn.keySet()) {
-                for (String excelColumn : excelColumnMap.keySet()) {
-                    if (excelColumn.equals(combineColumn.get(mainDatabaseColumn))) {
-                        medicineModel.put(mainDatabaseColumn, rowMedicine[excelColumnMap.get(excelColumn) - 1]);
-                    }
-                }
-            }
-            testMedicineModels.add(medicineModel);
-        }
-        return testMedicineModels;
-    }
-
 }

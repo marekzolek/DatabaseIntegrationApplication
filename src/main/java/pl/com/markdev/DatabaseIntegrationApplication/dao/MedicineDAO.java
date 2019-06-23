@@ -13,9 +13,9 @@ public interface MedicineDAO {
 
     Map<String, Integer> columnNamesFromExcel(int tableIndex, String url);
 
+    List<String> columnListFromExcel(int tableIndex, String url);
+
     List<TableModel> columnNames(final String tableName);
 
     List<MedicineModel> allMedicines(final String tableName);
-
-    List<MedicineModel> allMedicinesFromExcel(List<String> rows, int numberOfColumnsInExcel, Map<String, Integer> excelColumnMap);
 }

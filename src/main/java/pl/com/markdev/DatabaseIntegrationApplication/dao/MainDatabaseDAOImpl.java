@@ -104,7 +104,7 @@ public class MainDatabaseDAOImpl implements MainDatabaseDAO {
                     }
                     SQL += ") VALUES (";
                     for (String columnName : columnList.getColumnList()) {
-                        SQL += "'" + medicine.get(columnName) + "', ";
+                        SQL += "'" + medicine.getMedicineModelMap().get(columnName) + "', ";
                     }
                     SQL += ");";
                     jdbc.execute(SQL);

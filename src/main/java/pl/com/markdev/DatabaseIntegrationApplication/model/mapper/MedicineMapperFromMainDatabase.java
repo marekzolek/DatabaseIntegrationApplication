@@ -21,9 +21,9 @@ public class MedicineMapperFromMainDatabase implements RowMapper {
         MedicineModel medicineModel = new MedicineModel();
         for (int numerOfColumn = 0; numerOfColumn < columnList.getColumnList().size(); numerOfColumn++) {
             if (numerOfColumn == 0) {
-                medicineModel.put(columnList.getColumnList().get(numerOfColumn), String.valueOf(resultSet.getLong(columnList.getColumnList().get(numerOfColumn))));
+                medicineModel.getMedicineModelMap().put(columnList.getColumnList().get(numerOfColumn), String.valueOf(resultSet.getLong(columnList.getColumnList().get(numerOfColumn))));
             } else{
-                medicineModel.put(columnList.getColumnList().get(numerOfColumn), resultSet.getString(columnList.getColumnList().get(numerOfColumn)));
+                medicineModel.getMedicineModelMap().put(columnList.getColumnList().get(numerOfColumn), resultSet.getString(columnList.getColumnList().get(numerOfColumn)));
             }
         }
         return medicineModel;

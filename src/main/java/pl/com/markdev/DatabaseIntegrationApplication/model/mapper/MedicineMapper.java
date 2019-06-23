@@ -18,8 +18,8 @@ public class MedicineMapper implements RowMapper {
     @Override
     public MedicineModel mapRow(ResultSet resultSet, int i) throws SQLException {
         MedicineModel testMedicineModel = new MedicineModel();
-        for (String newDatabaseColumn : combineColumn.values()) {
-        testMedicineModel.put(newDatabaseColumn, resultSet.getString(newDatabaseColumn));
+        for (String newDatabaseColumn : combineColumn.getCombineColumn().values()) {
+        testMedicineModel.getMedicineModelMap().put(newDatabaseColumn, resultSet.getString(newDatabaseColumn));
         }
         return testMedicineModel;
     }

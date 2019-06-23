@@ -8,13 +8,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import java.awt.CardLayout;
 
 @Component
 public class AppForm extends JFrame {
+
 
     public static final int WIDTH = 1000;
     public static final int HEIGHT = 1000;
@@ -98,7 +98,6 @@ public class AppForm extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();
         setVisible(true);
-
     }
 
     public JPanel getContPanel() {
@@ -235,21 +234,5 @@ public class AppForm extends JFrame {
 
     public JButton getChooseTableButton() {
         return chooseTableButton;
-    }
-
-    public JPanel getMenuPanel() {
-        return menuPanel;
-    }
-
-    public JPanel getConnectPanel() {
-        return connectPanel;
-    }
-
-    public JPanel getAllMedicinesPanel() {
-        return allMedicinesPanel;
-    }
-
-    public JPanel getFinalConnectPanel() {
-        return finalConnectPanel;
     }
 }
