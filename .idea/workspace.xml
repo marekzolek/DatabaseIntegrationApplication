@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e57ead0c-ad6b-47fc-9a75-35a7e5d9d7a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromAddNewColumnForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/AddNewColumnController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AddNewColumnForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/forms/AddNewColumnForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromConnectPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromConnectPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/ConnectPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/controller/ConnectPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/service/MainDatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/service/MainDatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/service/serviceImplementation/MainDatabaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/service/serviceImplementation/MainDatabaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/dao/MainDatabaseDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/service/MainDatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/service/MainDatabaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/service/serviceImplementation/MainDatabaseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/com/markdev/DatabaseIntegrationApplication/service/serviceImplementation/MainDatabaseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromAddNewColumnForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromAddNewColumnForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -92,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromAddNewColumnForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="29" column="98" selection-start-line="29" selection-start-column="98" selection-end-line="29" selection-end-column="98" />
+            <state relative-caret-position="276">
+              <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -333,35 +319,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DatabaseIntegrationApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-              <item name="AddNewColumnForm" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="DatabaseIntegrationApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-              <item name="AppForm" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="DatabaseIntegrationApplication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DatabaseIntegrationApplication" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -392,7 +349,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="123" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="278" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561543728307" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561554256320" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../B2BNetwork/B2BNetwork - projekty z zajęć/PunkAPI" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -462,7 +419,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81522954" visible="true" weight="0.25626913" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81522954" visible="true" weight="0.25626913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -474,7 +431,7 @@
       <window_info id="Job Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32586786" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45240763" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14109743" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31354985" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -510,12 +467,6 @@
           <line>121</line>
           <properties />
           <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromAddNewColumnForm.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -954,8 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/markdev/DatabaseIntegrationApplication/actionListeners/ActionListenersFromAddNewColumnForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="29" column="98" selection-start-line="29" selection-start-column="98" selection-end-line="29" selection-end-column="98" />
+        <state relative-caret-position="276">
+          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

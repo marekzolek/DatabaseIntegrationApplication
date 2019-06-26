@@ -30,9 +30,8 @@ public class ActionListenersFromAddNewColumnForm {
                 String tableName = appForm.getMainDatabaseComboBox().getSelectedItem().toString();
                 String newColumnName = addNewColumnForm.getNewColumnNameTextField().getText().toUpperCase();
                 mainDatabaseService.addNewColumn(newColumnName, tableName);
+                mainDatabaseService.fillColumnComboBox(tableName);
                 addNewColumnForm.dispose();
-                appForm.revalidate();
-                appForm.repaint();
             }
         };
         return result;
@@ -43,8 +42,7 @@ public class ActionListenersFromAddNewColumnForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 addNewColumnForm.dispose();
-                appForm.revalidate();
-                appForm.repaint();
+
             }
         };
         return result;
