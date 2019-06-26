@@ -6,8 +6,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pl.com.markdev.DatabaseIntegrationApplication.cfg.MyDataSource;
 import pl.com.markdev.DatabaseIntegrationApplication.component.ColumnList;
+import pl.com.markdev.DatabaseIntegrationApplication.controller.AddNewColumnController;
 import pl.com.markdev.DatabaseIntegrationApplication.controller.FinalConnectPanelController;
 import pl.com.markdev.DatabaseIntegrationApplication.controller.MenuPanelController;
+import pl.com.markdev.DatabaseIntegrationApplication.forms.AddNewColumnForm;
 import pl.com.markdev.DatabaseIntegrationApplication.forms.AppForm;
 import pl.com.markdev.DatabaseIntegrationApplication.model.MedicineModel;
 import pl.com.markdev.DatabaseIntegrationApplication.service.FinalAddMedicineTableService;
@@ -55,6 +57,12 @@ public class ActionListenersFromConnectPanel {
 
     @Autowired
     private MenuPanelController menuPanelController;
+
+    @Autowired
+    private AddNewColumnForm addNewColumnForm;
+
+    @Autowired
+    private AddNewColumnController addNewColumnController;
 
     public ActionListener connectButton() {
 
@@ -235,6 +243,17 @@ public class ActionListenersFromConnectPanel {
 
                 appForm.getCardLayout().show(appForm.getContPanel(), "finalConnectPanel");
                 finalConnectPanelController.initController(medicineModels);
+            }
+        };
+        return result;
+    }
+
+    public ActionListener addNewColumnButton() {
+        ActionListener result = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                addNewColumnForm.setVisible(true);
+                addNewColumnController.initController();
             }
         };
         return result;

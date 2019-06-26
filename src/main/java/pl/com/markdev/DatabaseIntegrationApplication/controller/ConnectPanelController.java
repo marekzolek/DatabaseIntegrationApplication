@@ -28,6 +28,7 @@ public class ConnectPanelController {
         appForm.getExcelFileRadioButton().addActionListener(actionListenersFromConnectPanel.excelFileRadioButton());
         appForm.getBackFromAddButton().addActionListener(actionListenersFromConnectPanel.backButton());
         appForm.getFirstNextButton().addActionListener(actionListenersFromConnectPanel.nextButton());
+        appForm.getAddColumnButton().addActionListener(actionListenersFromConnectPanel.addNewColumnButton());
     }
 
     private void removeActionListeners() {
@@ -56,6 +57,10 @@ public class ConnectPanelController {
         actionListeners = appForm.getFirstNextButton().getActionListeners();
         for (ActionListener actionListener : actionListeners) {
             appForm.getFirstNextButton().removeActionListener(actionListener);
+        }
+        actionListeners = appForm.getAddColumnButton().getActionListeners();
+        for (ActionListener actionListener : actionListeners) {
+            appForm.getAddColumnButton().removeActionListener(actionListener);
         }
     }
 

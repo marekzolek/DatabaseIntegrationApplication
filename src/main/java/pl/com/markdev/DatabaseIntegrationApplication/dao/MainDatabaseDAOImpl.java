@@ -183,4 +183,21 @@ public class MainDatabaseDAOImpl implements MainDatabaseDAO {
         }
         return medicines;
     }
+
+    @Override
+    public void addNawColumn(final String columnName, final String tableName){
+
+        dataSource.setUrl(mainDatabaseUrl);
+        dataSource.setUsername(mainDatabaseUsername);
+        dataSource.setPassword(mainDatabasePassword);
+
+        String SQL = "ALTER TABLE " + tableName + " ADD " + columnName + " varchar(200);";
+
+        try (Connection conn = dataSource.getConnection()) {
+            jdbc.execute(SQL);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

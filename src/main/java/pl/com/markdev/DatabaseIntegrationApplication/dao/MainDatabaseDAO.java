@@ -15,4 +15,6 @@ public interface MainDatabaseDAO {
     void saveAll(List<MedicineModel> medicines, String tableName);
 
     List<MedicineModel> allMedicines(final String tableName);
+
+    void addNawColumn(String columnName, String tableName);
 }

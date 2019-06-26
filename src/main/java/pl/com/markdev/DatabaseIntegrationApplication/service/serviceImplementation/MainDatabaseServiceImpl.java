@@ -97,4 +97,9 @@ public class MainDatabaseServiceImpl implements MainDatabaseService {
             appForm.getMainDatabaseTablesComboBox().addItem(databaseModel.getTableName());
         }
     }
+
+    @Override
+    public void addNewColumn(String columnName, String tableName) {
+        mainDatabaseDAO.addNawColumn(columnName, tableName);
+    }
 }

@@ -24,4 +24,6 @@ public interface MainDatabaseService {
     List<MedicineModel> allMedicines(String tableName);
 
     void fillTablesComboBoxFromAll();
+
+    void addNewColumn(final String columnName, final String tableName);
 }
