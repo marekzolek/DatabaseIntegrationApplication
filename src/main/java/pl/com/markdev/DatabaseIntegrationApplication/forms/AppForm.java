@@ -75,7 +75,7 @@ public class AppForm extends JFrame {
 //        url.setText("D:\\Pulpit/medicinesExcel.xlsx");
         url.setText("jdbc:mysql://localhost:3306/medicines");
         username.setText("root");
-        password.setText("MarekZolek93!");
+        password.setText("password");
 
         columnFromMainDatabaseComboBox.setVisible(false);
         columnFromOtherDatabaseComboBox.setVisible(false);
